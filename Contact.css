@@ -1,0 +1,294 @@
+/* ----------------- Page WEB ----------------- */
+* {
+  margin    : 0%;
+  padding   : 0%;
+  font-style: normal;
+}
+
+/* ------------------- BODY ------------------- */
+body {
+  background           : url("img/space.gif");
+  background-attachment: fixed;
+  background-position  : center;
+  background-repeat    : no-repeat;
+  background-size      : cover;
+  font-family          : Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+/* ---------------- Présentation -------------- */
+#txt {
+  background-color: rgb(255, 255, 255, 0.85);
+  text-align      : center;
+  margin          : auto;
+  color           : black;
+
+}
+
+/* ********** TEXTE DU CHOIX DES PAGES *********** */
+a {
+  color: #fff;
+}
+
+.menu nav {
+  background: inherit;
+  font-size : 20px;
+  height    : 0;
+  overflow  : hidden;
+  transition: 0.2s;
+}
+
+.menu nav>* {
+  display    : block;
+  line-height: 3;
+  padding    : 1px;
+  width      : 100%;
+  margin-left: 3%;
+}
+
+/* ********** TEXTE DE LA BARRE DE MENU & BARRE DE MENU *********** */
+.menu {
+  background: #01696a;
+  color     : #fff;
+  z-index   : 5;
+
+  position    : fixed;
+  width       : 98%;
+  top         : 0;
+  margin-left : 1%;
+  margin-right: 1%;
+}
+
+.menu .title {
+  font-size  : 135%;
+  line-height: 50px;
+  padding    : 0 20px;
+}
+
+/* ********** BOUTON DE LA BARRE DE MENU *********** */
+.menu .burger {
+  appearance        : none;
+  -moz-appearance   : none;
+  -webkit-appearance: none;
+  color             : inherit;
+  cursor            : pointer;
+  font-family       : "Material Icons";
+  font-size         : 30px;
+  line-height       : 50px;
+  margin            : 0;
+  outline           : 0;
+  padding           : 0;
+  position          : absolute;
+  text-align        : center;
+  top               : 0;
+  right             : 10px;
+  width             : 50px;
+}
+
+.menu .burger:before {
+  content: "☰";
+}
+
+.menu .burger:checked:before {
+  content: "✖";
+}
+
+.menu .burger:checked+nav {
+  height: calc(60vh - 128px);
+}
+
+/* ********** DARK MODE *********** */
+.Case_contact.dark-mode {
+  background: black;
+  border    : solid white;
+}
+
+/* ********** BOUTON DARK MODE *********** */
+#dark {
+  background-color: #000000;
+  border          : none;
+  color           : white;
+  padding         : 5px 15px;
+  display         : inline-block;
+  font-size       : 16px;
+  margin          : 4px 2px;
+  cursor          : pointer;
+  border-radius   : 50px;
+}
+
+#dark:hover {
+  background-color: white;
+  color           : black;
+  border          : 2px solid black;
+}
+
+/* ********** Nom en face des cases *********** */
+label>span,
+input,
+textarea,
+#bouton {
+  box-sizing   : border-box;
+  border-radius: 5px;
+}
+
+/* ********** CASE NAME & EMAIL *********** */
+input,
+textarea,
+#bouton {
+  width  : 100%;
+  padding: 0.5em;
+  border : none;
+  font   : 100% sans-serif;
+}
+
+/* ********** CASE EMAIL *********** */
+input[type="text"],
+input[type="email"],
+textarea {
+  margin : 0 0 1%;
+  border : 1px solid #ccc;
+  outline: none;
+}
+
+/* ********** BOUTON SUBMIT *********** */
+input[type="submit"],
+#bouton {
+  background: #01696a;
+  color     : #333;
+}
+
+
+/* --------- Réglage adaptation taille écran ----------------- */
+@media screen and (min-width: 30em) {
+  section h2 {
+    margin-bottom: 2%;
+    text-align   : center;
+    font-size    : 2em;
+    line-height  : 1.5;
+  }
+
+  label>span {
+    vertical-align: top;
+    display       : inline-block;
+    width         : 26.3736%;
+    padding       : 0.5em;
+    border        : 1px solid transparent;
+    text-align    : right;
+  }
+
+  input,
+  textarea,
+  #bouton {
+    width      : 73.6263%;
+    line-height: 1.5;
+  }
+
+  textarea {
+    height: 10em;
+  }
+
+  input[type="submit"],
+  #bouton {
+    margin-left: 26.3736%;
+  }
+}
+
+/* ********** FOND DE LA CASE CONTACT *********** */
+@media screen and (min-width: 48em) {
+  section {
+    padding: 1%;
+  }
+
+  /* ********** CASE ERREUR FORMULAIRE *************** */
+  #retour {
+    margin-top      : 1%;
+    background-color: rgba(255, 0, 0, 0.678);
+    text-align      : center;
+    border-radius   : 5px;
+    font-weight     : bolder;
+  }
+
+  /* ********** REGLAGE DU TEXTE "ASIDE" *********** */
+  section form,
+  section aside {
+    vertical-align: top;
+    display       : inline-block;
+    width         : 65.4676%;
+    text-align    : left;
+    line-height   : 1.5;
+  }
+
+  section aside {
+    width: 30.9353%;
+  }
+}
+
+/* --------- ARRIERE PLAN CASE CONTACT -------------------- */
+.Case_contact {
+  background-color: rgba(255, 255, 255, 0.897);
+  height          : 950px;
+  margin-left     : 10%;
+  margin-right    : 10%;
+  border-left     : solid white;
+  border-right    : solid white;
+}
+
+.contact-form {
+  border      : solid transparent;
+  margin-left : 2%;
+  margin-right: 2%;
+}
+
+.responsive {
+  margin-top: 200px;
+}
+
+.header {
+  text-align      : center;
+  background-color: #01696a;
+  color           : black;
+  padding         : 1vh;
+  border-radius   : 5px;
+}
+
+/* ********** TEXTE ASIDE *********** */
+#asidee {
+  float        : right;
+  text-align   : left;
+  color        : gray;
+  margin-top   : 5%;
+  margin-bottom: 5%;
+}
+
+/* ********** NOM DES CASES *********** */
+form {
+  color: gray;
+}
+
+/* ********** TITRE CONTACT *********** */
+h2 {
+  color          : gray;
+  text-decoration: underline;
+}
+
+/* ********** CUSTOM SCROLLBAR *********** */
+/* width */
+::-webkit-scrollbar {
+  width : 15px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #01696a;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

@@ -1,0 +1,263 @@
+/* --------------- Site Web ------------------- */
+* {
+  margin     : 0%;
+  padding    : 0%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing : border-box;
+  font-style : normal;
+}
+
+/* ************ BODY *************** */
+body {
+  background-image     : url("img/space.gif");
+  background-attachment: fixed;
+  background-position  : center;
+  background-repeat    : no-repeat;
+  background-size      : cover;
+}
+
+/* ********** TEXTE DU CHOIX DES PAGES *********** */
+a {
+  color          : #fff;
+  text-decoration: none;
+}
+
+.menu nav {
+  background: inherit;
+  font-size : 20px;
+  height    : 0;
+  overflow  : hidden;
+  transition: height 0.2s;
+}
+
+.menu nav>* {
+  display    : block;
+  line-height: 3;
+  padding    : 1px;
+  width      : 100%;
+  margin-top : 1%;
+  margin-left: 3%;
+}
+
+/* ********** TEXTE DE LA BARRE DE MENU & BARRE DE MENU *********** */
+.menu {
+  background  : #01696a;
+  color       : #fff;
+  height      : 50px;
+  position    : fixed;
+  width       : 98%;
+  top         : 0;
+  margin-left : 1%;
+  margin-right: 1%;
+}
+
+.menu .title {
+  font-size  : 135%;
+  line-height: 50px;
+  padding    : 0 20px;
+}
+
+/* ********** BOUTON DE LA BARRE DE MENU *********** */
+.menu .burger {
+  appearance        : none;
+  -moz-appearance   : none;
+  -webkit-appearance: none;
+  color             : inherit;
+  cursor            : pointer;
+  font-family       : "Material Icons";
+  font-size         : 30px;
+  line-height       : 50px;
+  margin            : 0;
+  outline           : 0;
+  padding           : 0;
+  position          : absolute;
+  text-align        : center;
+  top               : 0;
+  right             : 10px;
+  width             : 50px;
+}
+
+.menu .burger:before {
+  content: "☰";
+}
+
+.menu .burger:checked:before {
+  content: "✖";
+}
+
+.menu .burger:checked+nav {
+  height: calc(60vh - 128px);
+}
+
+/* ********** MODE DARK MODE *********** */
+.dark-mode {
+  background: rgba(0, 0, 0, 0.842);
+  color     : white;
+  border    : solid white;
+}
+
+/* ********** BOUTON DARK MODE *********** */
+#dark {
+  background-color: #000000;
+  border          : none;
+  color           : white;
+  padding         : 5px 15px;
+  text-align      : center;
+  text-decoration : none;
+  display         : inline-block;
+  font-size       : 16px;
+  margin          : 4px 2px;
+  cursor          : pointer;
+  border-radius   : 50px;
+}
+
+#dark:hover {
+  background-color: white;
+  color           : black;
+  border          : 2px solid black;
+}
+
+/* ************ TAILLE DE LA ZONE BLANCHE ET SON CONTENU *************** */
+section {
+  max-width       : 1570px;
+  margin          : 0 auto;
+  height          : auto;
+  background-color: rgba(255, 255, 255, 0.753);
+  margin-top      : 35px;
+  border          : solid white;
+}
+
+/* *********** HAUT DU SITE (welcome [...]) **************** */
+.HeaDer {
+  background   : #01696a;
+  text-align   : center;
+  font-style   : normal;
+  font-size    : larger;
+  margin-top   : 35px;
+  margin-bottom: 2%;
+  padding      : 2%;
+}
+
+/* *********** COLONNE GRISE BIOGRAPHIE **************** */
+.content {
+  width           : 50%;
+  height          : auto;
+  background-color: grey;
+  margin-bottom   : 40px;
+  border          : solid;
+  border-radius   : 50px;
+  margin-top      : 5%;
+  margin-bottom   : 5%;
+}
+
+.content1 {
+  width           : 50%;
+  height          : auto;
+  background-color: grey;
+  margin-bottom   : 40px;
+  border          : solid;
+  border-radius   : 50px;
+
+  margin-top   : 5%;
+  margin-bottom: 5%;
+}
+
+/* ************ COLONNE GRISE TEXTE *************** */
+.text1 {
+  margin-top   : 5%;
+  margin-left  : 3%;
+  margin-right : 3%;
+  margin-bottom: 1%;
+  font-style   : normal;
+}
+
+.text {
+  margin-top   : 2%;
+  margin-left  : 3%;
+  margin-right : 3%;
+  margin-bottom: 2%;
+  font-style   : normal;
+}
+
+/* *********** COLONNE VIOLET : TEXTE + IMAGE **************** */
+.resume {
+  width           : 35%;
+  height          : auto;
+  margin-top      : 5%;
+  margin-bottom   : 5%;
+  border          : solid;
+  border-radius   : 40px;
+  background-color: #01696a;
+}
+
+.resume img {
+  width : 100%;
+  height: auto;
+}
+
+/* ************ REGLAGE DU MODE "FLEX" *************** */
+.flex {
+  display        : flex;
+  gap            : 40px;
+  justify-content: center;
+  margin-left    : 1%;
+  margin-right   : 1%;
+  flex-wrap      : wrap;
+}
+
+/* *********** TEXTE DE LA COLONNE IMAGE**************** */
+.bio {
+  margin-top   : 3%;
+  margin-bottom: 3%;
+  margin-left  : 3%;
+  margin-right : 3%;
+}
+
+.bio1 {
+  margin-top   : 3%;
+  margin-bottom: 3%;
+  font-weight  : bold;
+  margin-left  : 3%;
+  margin-right : 3%;
+  text-align   : center;
+  font-size    : large;
+}
+
+/* ************ REGLAGE DU MODE "FLEX" *************** */
+.flex1 {
+  display        : flex;
+  gap            : 40px;
+  justify-content: center;
+  margin-left    : 1%;
+  margin-right   : 1%;
+  flex-wrap      : wrap;
+}
+
+/* ************ BAS DU SITE (IDRI RAYAN [...]) *************** */
+footer {
+  background: #01696a;
+  text-align: center;
+  font-style: normal;
+}
+
+/* ********** CUSTOM SCROLLBAR *********** */
+/* width */
+::-webkit-scrollbar {
+  width : 15px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #01696a;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

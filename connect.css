@@ -1,0 +1,24 @@
+body {
+    background: lightblue;
+}
+
+.connexion {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 30vh;
+    background: lightpink;
+    border: solid 2px black;
+    padding: 1%;
+    flex-direction: column;
+    text-align: center;
+}
+
+.user {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.pass {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}

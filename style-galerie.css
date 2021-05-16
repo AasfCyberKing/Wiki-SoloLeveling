@@ -1,0 +1,357 @@
+/* ----------------- Page WEB ----------------- */
+* {
+  margin    : 0%;
+  padding   : 0%;
+  font-style: normal;
+}
+
+/* ------------------- BODY ------------------- */
+body {
+  background           : url("img/space.gif");
+  background-attachment: fixed;
+  background-position  : center;
+  background-repeat    : no-repeat;
+  background-size      : cover;
+  font-family          : Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ********** TEXTE DU CHOIX DES PAGES *********** */
+a {
+  color          : #fff;
+  text-decoration: none;
+}
+
+.menu nav {
+  background: inherit;
+  font-size : 20px;
+  height    : 0;
+  overflow  : hidden;
+  transition: height 0.2s;
+}
+
+.menu nav>* {
+  display    : block;
+  line-height: 3;
+  padding    : 1px;
+  width      : 100%;
+  margin-top : 1%;
+  margin-left: 3%;
+}
+
+/* ********** TEXTE DE LA BARRE DE MENU & BARRE DE MENU *********** */
+.menu {
+  background: #01696a;
+  color     : #fff;
+  height    : 50px;
+
+  position    : fixed;
+  width       : 98%;
+  top         : 0;
+  margin-left : 1%;
+  margin-right: 1%;
+}
+
+.menu .title {
+  font-size  : 135%;
+  line-height: 50px;
+  padding    : 0 20px;
+}
+
+/* ********** BOUTON DE LA BARRE DE MENU *********** */
+.menu .burger {
+  appearance        : none;
+  -moz-appearance   : none;
+  -webkit-appearance: none;
+  color             : inherit;
+  cursor            : pointer;
+  font-family       : "Material Icons";
+  font-size         : 30px;
+  line-height       : 50px;
+  margin            : 0;
+  outline           : 0;
+  padding           : 0;
+  position          : absolute;
+  text-align        : center;
+  top               : 0;
+  right             : 10px;
+  width             : 50px;
+}
+
+.menu .burger:before {
+  content: "☰";
+}
+
+.menu .burger:checked:before {
+  content: "✖";
+}
+
+.menu .burger:checked+nav {
+  height: calc(60vh - 128px);
+}
+
+/* --------------- BLOC CONTENANT LES IMAGES ------------------- */
+.container {
+  max-width   : 100%;
+  text-align  : center;
+  margin-left : 2%;
+  margin-right: 2%;
+}
+
+/* ********** CARRE REGROUPANT L'IMAGE ET LE TEXTE *********** */
+.container__img-holder {
+  max-width     : 300px;
+  display       : inline-block;
+  vertical-align: top;
+  margin-bottom : 20px;
+  margin-left   : 16px;
+  cursor        : pointer;
+  border-radius : 10px;
+  margin-right  : 2%;
+  border        : solid white;
+  background    : white;
+}
+
+/* ********** IMAGES *********** */
+.container__img-holder img {
+  width  : 300px;
+  height : 200px;
+  display: block;
+}
+
+/* ********** POSITION IMAGE POPUP + FOND *********** */
+.img-popup {
+  position       : fixed;
+  top            : 0;
+  right          : 0;
+  bottom         : 0;
+  left           : 0;
+  background     : rgba(63, 61, 61, 0.966);
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  display        : none;
+}
+
+/* ********** REGLAGE TAILLE IMAGE POPUP *********** */
+.img-popup img {
+  max-width    : 1000px;
+  width        : 100%;
+  border-radius: 10px;
+}
+
+/* ********** CROIX ROUGE POPUP *********** */
+.close-btn {
+  width          : 57px;
+  height         : 39px;
+  display        : flex;
+  justify-content: center;
+  flex-direction : column;
+  position       : absolute;
+  top            : 50px;
+  right          : 55px;
+  cursor         : pointer;
+}
+
+.close-btn .bar {
+  height    : 11px;
+  background: #f00;
+}
+
+.close-btn .bar:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.close-btn .bar:nth-child(2) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+/* ********** AFFICHAGE DE L'IMAGE POPUP *********** */
+.opened {
+  display: flex;
+}
+
+/* ********** CUSTOM SCROLLBAR *********** */
+/* width */
+::-webkit-scrollbar {
+  width : 15px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #01696a;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ******* FILTRE JS ******** */
+#elements {
+  text-align: center;
+}
+
+#elements div {
+  border-radius: 10px;
+  display      : inline-block;
+}
+
+#elements div.Woo {
+  margin: 0.5%;
+}
+
+#elements div.Fr_En {
+  margin: 0.5%;
+}
+
+#elements div.monsters {
+  margin: 0.5%;
+}
+
+#filtres {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#filtres li {
+  margin-top     : 1%;
+  margin-bottom  : 1%;
+  list-style-type: none;
+  padding        : 10px;
+  display        : inline-block;
+  text-align     : center;
+  cursor         : pointer;
+  border         : 1px solid;
+  color          : rgb(255, 255, 255);
+  background     : rgba(0, 0, 0, 0.438);
+  font-weight    : bolder;
+}
+
+#filtres li :hover,
+#filtres li.active {
+  color : #01696A;
+  border: solid 2px;
+}
+
+.txt-img {
+  margin-top   : 1%;
+  background   : white;
+  border       : solid 1px white;
+  border-radius: 5px;
+}
+
+/* ****** ESPACE COMMENTAIRE ******** */
+#com_name  {
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 1%;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+.space_com hr {
+  background: black;
+  height    : 1px;
+}
+
+.pseudo {
+  padding      : 0.5%;
+  height       : 20px;
+  margin-bottom: 1%;
+  border       : solid 1px black;
+}
+
+.commentaire {
+  padding      : 1%;
+  height       : 100px;
+  width        : 200px;
+  margin-bottom: 1%;
+  border       : solid 1px black;
+}
+
+.submit {
+  padding      : 5px;
+  border       : solid 1px black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.space_write {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom   : 2%;
+  margin-top      : 1%;
+  background-color: rgba(255, 255, 255, 0.753);
+  border      : solid 3px white;
+  border-radius: 5px;
+  padding         : 1%;
+}
+
+.space_com {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom   : 2%;
+  margin-top      : 2%;
+  background-color: rgba(255, 255, 255, 0.753);
+  border      : solid 3px white;
+  border-radius: 5px;
+  padding         : 1%;
+}
+
+.msg-err {
+  margin-top: 1%;
+  color     : black;
+}
+
+#séparation {
+  background  : white;
+  height      : 2px;
+  margin-left : 5%;
+  margin-right: 5%;
+}
+
+/* ********** MODE DARK MODE *********** */
+.dark-mode {
+  color     : white;
+  background-color: rgba(0, 0, 0, 0.671);
+  border    : solid 2px white;
+}
+
+/* ********** BOUTON DARK MODE *********** */
+#dark {
+  background-color: #000000;
+  border          : none;
+  color           : white;
+  padding         : 5px 15px;
+  text-align      : center;
+  text-decoration : none;
+  display         : inline-block;
+  font-size       : 16px;
+  margin          : 4px 2px;
+  cursor          : pointer;
+  border-radius   : 50px;
+}
+
+#dark:hover {
+  background-color: white;
+  color           : black;
+  border          : 2px solid black;
+}
+
+.supp {
+  background-color: rgba(255, 255, 255, 0.753);
+  float: right;
+  border-radius: 5px;
+  padding: 3px;
+  border: solid 1px black;
+  cursor: pointer;
+}
