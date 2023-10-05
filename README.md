@@ -1,3 +1,3 @@
-# Site-Projet-A1-16.05.2021
+# My first project (16.05.2021)
 
-Site réalisé dans le cadre d'un projet d'année d'une classe de prépa dans le cadre d'un examen d'entrée en deuxième année de DW.
+A site created as part of a year-long project by a prep school class for an entrance exam to the second year of Web Development.
